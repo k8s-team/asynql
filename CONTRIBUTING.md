@@ -34,6 +34,12 @@ Run `mypy asynql`.
 
 Run `doc8`.
 
+## Safety checks
+
+- [`safety`](https://github.com/pyupio/safety)
+
+Run `safety`.
+
 ### Before submitting
 
 Before submitting your code please do the following steps:
@@ -47,3 +53,4 @@ Before submitting your code please do the following steps:
 7. Run `mypy` to ensure that types are correct
 8. Run `flake8` to ensure that style is correct
 9. Run `doc8` to ensure that docs are correct
+10. Run `safety` to ensure that there are no insecure dependencies
