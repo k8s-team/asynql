@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "asynql"
+version = "0.1.0"
+description = "AsyncIO GraphQL client"
+authors = ["Vladimir Puzakov <vppuzakov@gmail.com>"]
+license = "GPL-3.0+"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.6"
+pylint = "^2.3"
+mypy = "^0.701.0"
+flake8 = "^3.7"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
