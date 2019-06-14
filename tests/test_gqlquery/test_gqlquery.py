@@ -1,4 +1,4 @@
-from tests.samples import Concert, Venue, Address
+from .samples import Concert, Venue, Address
 
 
 def test_one_field():
