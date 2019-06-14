@@ -2,10 +2,16 @@ from __future__ import annotations
 
 from typing import Any, Dict, Union
 
+from asynql.gqlfield import Field
+
 
 class GQLQuery:
 
-    def __init__(self, name: str, query: Dict[str, Any] = None, **kwargs) -> None:
+    def __init__(self,
+                 name: str,
+                 query: Dict[str, Any] = None,
+                 **kwargs) -> None:
+
         self.__name1__ = name
         self._filters: Dict[str, Any] = kwargs
         self._query: Dict[str, Any] = query or {self.__name1__: {}}
@@ -34,8 +40,5 @@ class GQLQuery:
                     else:
                         result += f" {kk}"
                 result += " }"
-        result = f"{{ {result} }}"  if not inner else result
+        result = f"{{ {result} }}" if not inner else result
         return result
-
-
-from .gqlmodel import Field

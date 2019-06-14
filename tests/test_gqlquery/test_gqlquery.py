@@ -26,7 +26,9 @@ def test_many_inner_gql_field_expand():
             Venue.title
         )
     ).to_gql()
-    assert query == "{ concerts { title venue_main { title } venue_reserved { title } } }"
+    assert query == "{ concerts " \
+                    "{ title venue_main { title } " \
+                    "venue_reserved { title } } }"
 
 
 def test_one_inner_gql_field_expand():
@@ -40,7 +42,9 @@ def test_one_inner_gql_field_expand():
         ),
         uid=123
     ).to_gql()
-    assert query == "{ concert(uid: 123) { title venue_main { title } venue_reserved { title } } }"
+    assert query == "{ concert(uid: 123) " \
+                    "{ title venue_main { title } " \
+                    "venue_reserved { title } } }"
 
 
 def test_complex_query():
@@ -53,4 +57,5 @@ def test_complex_query():
             )
         )
     ).to_gql()
-    assert query == "{ concerts { title venue_main { title address { line } } } }"
+    assert query == "{ concerts " \
+                    "{ title venue_main { title address { line } } } }"
