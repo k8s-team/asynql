@@ -18,13 +18,12 @@ install:
   - poetry install
 
 script:
-  - poetry run flake8 asynql tests docs
-  - poetry run mypy asynql tests/**/*.py
-  - poetry run pytest
-  - poetry run doc8 -q docs
-  - poetry check
-  - poetry run pip check
-  - poetry run safety check --bare --full-report
+  - make flake8
+  - make mypy
+  - make test
+  - make doc8
+  - make check
+  - make safety-check
 
 after_success:
   - pip install coveralls
