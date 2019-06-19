@@ -1,5 +1,24 @@
 .PHONY: docs clean lint test mypy flake8 doc8 check safety-check \
-		check-for-pull-request
+		check-for-pull-request requirements
+
+define get_requirements
+import tomlkit
+with open('poetry.lock') as t:
+    lock = tomlkit.parse(t.read())
+    for p in lock['package']:
+        if not p['category'] == 'dev' and not p['name'].endswith('-stubs'):
+            print(f"{p['name']}=={p['version']}")
+endef
+export get_requirements
+
+define get_dev_requirements
+import tomlkit
+with open('poetry.lock') as t:
+    lock = tomlkit.parse(t.read())
+    for p in lock['package']:
+        print(f"{p['name']}=={p['version']}")
+endef
+export get_dev_requirements
 
 check-for-pull-request: clean
 	@echo "check for pull request"
@@ -7,6 +26,10 @@ check-for-pull-request: clean
 	@$(MAKE) test
 	@$(MAKE) check
 	@$(MAKE) safety-check
+
+requirements: poetry.lock
+	poetry run python -c "$$get_requirements" > requirements.txt
+	poetry run python -c "$$get_dev_requirements" > docs/requirements.txt
 
 mypy:
 	@echo mypy check
