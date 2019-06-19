@@ -11,6 +11,15 @@ with open('poetry.lock') as t:
 endef
 export get_requirements
 
+define get_dev_requirements
+import tomlkit
+with open('poetry.lock') as t:
+    lock = tomlkit.parse(t.read())
+    for p in lock['package']:
+        print(f"{p['name']}=={p['version']}")
+endef
+export get_dev_requirements
+
 check-for-pull-request: clean
 	@echo "check for pull request"
 	@$(MAKE) lint
@@ -20,6 +29,7 @@ check-for-pull-request: clean
 
 requirements: poetry.lock
 	poetry run python -c "$$get_requirements" > requirements.txt
+	poetry run python -c "$$get_dev_requirements" > docs/requirements.txt
 
 mypy:
 	@echo mypy check
