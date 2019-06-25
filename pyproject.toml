@@ -34,7 +34,7 @@ typing-extensions = "^3.7"
 pydantic = "^0.28.0"
 
 [tool.poetry.dev-dependencies]
-mypy = "^0.701.0"
+mypy = "^0.711"
 flake8 = "^3.7"
 
 pytest = "^4.6"
