@@ -37,7 +37,7 @@ pydantic = "^0.28.0"
 mypy = "^0.701.0"
 flake8 = "^3.7"
 
-pytest = "^4.6"
+pytest = "^5.0"
 pytest-html = "^1.20"
 pytest-cov = "^2.7"
 
