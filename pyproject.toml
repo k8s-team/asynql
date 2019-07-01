@@ -41,7 +41,7 @@ pytest = "^4.6"
 pytest-html = "^1.20"
 pytest-cov = "^2.7"
 
-tomlkit = "^0.5.3"
+tomlkit = "^0.5.4"
 sphinx = "^2.1"
 m2r = "^0.2.1"
 sphinx_autodoc_typehints = "^1.6"
