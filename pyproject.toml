@@ -46,7 +46,7 @@ sphinx = "^2.1"
 m2r = "^0.2.1"
 sphinx_autodoc_typehints = "^1.6"
 "sphinxcontrib.mermaid" = "^0.3.1"
-sphinx_typlog_theme = "^0.7.2"
+sphinx_typlog_theme = "^0.7.3"
 doc8 = "^0.8.0"
 
 safety = "^1.8"
