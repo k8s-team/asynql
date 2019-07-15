@@ -38,7 +38,7 @@ mypy = "^0.701.0"
 flake8 = "^3.7"
 
 pytest = "^4.6"
-pytest-html = "^1.20"
+pytest-html = "^1.21"
 pytest-cov = "^2.7"
 
 tomlkit = "^0.5.3"
