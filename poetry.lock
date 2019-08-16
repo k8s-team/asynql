@@ -320,18 +320,21 @@ description = "pytest: simple powerful testing with Python"
 name = "pytest"
 optional = false
 python-versions = ">=3.5"
-version = "5.0.1"
+version = "5.1.0"
 
 [package.dependencies]
 atomicwrites = ">=1.0"
 attrs = ">=17.4.0"
 colorama = "*"
-importlib-metadata = ">=0.12"
 more-itertools = ">=4.0.0"
 packaging = "*"
 pluggy = ">=0.12,<1.0"
 py = ">=1.5.0"
 wcwidth = "*"
+
+[package.dependencies.importlib-metadata]
+python = "<3.8"
+version = ">=0.12"
 
 [[package]]
 category = "dev"
@@ -614,7 +617,7 @@ python-versions = ">=2.7"
 version = "0.5.1"
 
 [metadata]
-content-hash = "802120fa59d7db9d50e56e524054df6575624fcd934213c6b6beaf934606d8ab"
+content-hash = "05f1c3f1ab0b2308ae33376a4a03e3333525931d1e78196a6ce5a89404044e51"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -652,7 +655,7 @@ pydantic = ["0b7998c6e4106e57317a511a17ec8b3c99a20f037daa9687e2cffb48f20e36d3", 
 pyflakes = ["17dbeb2e3f4d772725c777fabc446d5634d1038f234e77343108ce445ea69ce0", "d976835886f8c5b31d47970ed689944a0262b5f3afa00a5a7b4dc81e5449f8a2"]
 pygments = ["71e430bc85c88a430f000ac1d9b331d2407f681d6f6aec95e8bcfbc3df5b0127", "881c4c157e45f30af185c1ffe8d549d48ac9127433f2c380c24b84572ad66297"]
 pyparsing = ["1873c03321fc118f4e9746baf201ff990ceb915f433f23b395f5580d1840cb2a", "9b6323ef4ab914af344ba97510e966d64ba91055d6b9afa6b30799340e89cc03"]
-pytest = ["6ef6d06de77ce2961156013e9dff62f1b2688aa04d0dc244299fe7d67e09370d", "a736fed91c12681a7b34617c8fcefe39ea04599ca72c608751c31d89579a3f77"]
+pytest = ["3805d095f1ea279b9870c3eeae5dddf8a81b10952c8835cd628cf1875b0ef031", "abc562321c2d190dd63c2faadf70b86b7af21a553b61f0df5f5e1270717dc5a3"]
 pytest-cov = ["2b097cde81a302e1047331b48cadacf23577e431b61e9c6f49a1170bbe3d3da6", "e00ea4fdde970725482f1f35630d12f074e121a23801aabf2ae154ec6bdd343a"]
 pytest-html = ["ac405ca2fc4a55b83ca59319c69552f9bc870db2378e851633970bfc7fb93928", "c2312f3bb1c78fac08580dd2cc9bd0a726cad369375a9bf30c838ff7532120cc"]
 pytest-metadata = ["2071a59285de40d7541fde1eb9f1ddea1c9db165882df82781367471238b66ba", "c29a1fb470424926c63154c1b632c02585f2ba4282932058a71d35295ff8c96d"]
