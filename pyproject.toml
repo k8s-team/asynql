@@ -42,7 +42,7 @@ pytest-html = "^1.21"
 pytest-cov = "^2.7"
 
 tomlkit = "^0.5.5"
-sphinx = "^2.1"
+sphinx = "^2.2"
 m2r = "^0.2.1"
 sphinx_autodoc_typehints = "^1.6"
 "sphinxcontrib.mermaid" = "^0.3.1"
