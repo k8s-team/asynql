@@ -9,7 +9,7 @@ colorama==0.4.1
 coverage==4.5.3
 doc8==0.8.0
 docutils==0.14
-dparse==0.4.1
+dparse==0.5.1
 entrypoints==0.3
 flake8==3.7.7
 idna==2.8
